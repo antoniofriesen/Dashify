@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+# Function to render the plots
+def plot_data(request):
+    return render(request, "plot/plot.html")
