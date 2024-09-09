@@ -15,10 +15,20 @@
 <body>
     <nav>
         <a href="/">Home</a> |
+        <a href="{% url 'users:login' %}">Login</a> |
+        <a href="{% url 'users:register' %}">Register</a> |
+        <form class="logout" action="{% url 'users:logout' %}" method="POST">
+            {% csrf_token %}
+            <button class="logout-button" title="User Logout">Logout</button>
+        </form>
     </nav>
     <main>
         {% block content %}
         {% endblock content %}
     </main>
+    <footer>
+        {% block footer %}
+        {% endblock footer %}
+    </footer>
 </body>
 </html>
