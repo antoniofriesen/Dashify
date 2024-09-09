@@ -1,0 +1,33 @@
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+
+# Environment files
+env/
+venv/
+.env/
+.venv/
+*.env
+*.local
+*.log
+
+# Django stuff
+# db.sqlite3
+db.sqlite3-journal
+
+# Django static and media files
+# static/
+# media/
+
+# Byte-compiled files
+*.swp
+*.swo
+
+# macOS-specific files
+.DS_Store
+
+# Windows-specific files
+Thumbs.db
