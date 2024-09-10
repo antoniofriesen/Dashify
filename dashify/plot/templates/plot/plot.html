@@ -1,5 +1,3 @@
-
-
 {% extends "layout.html" %}
 
 {% block title %}
@@ -7,6 +5,16 @@
 {% endblock title %}
 
 {% block content %}
-    <h1>Hi from Plot</h1>
-    <p> <a href="/plot/darstellungen"><button>Plot erstellen</button></a></p>
+        <div class="container">
+            <div class="card">
+                <div>
+                    <h1>Hi from Plot</h1>
+                </div>
+                <div>
+                    <p>Plot here</p>
+                </div>
+                    <a href="/plot/darstellungen"><button class="button">Plot erstellen</button></a>
+                </div>
+            </div>
+        </div>
 {% endblock content %}
