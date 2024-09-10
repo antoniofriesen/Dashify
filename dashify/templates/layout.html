@@ -13,22 +13,28 @@
     <script src="{% static 'js/main.js' %}" defer></script>
 </head>
 <body>
-    <nav>
-        <a href="/">Home</a> |
-        {% if user.is_authenticated %}
-            <a href="{% url 'posts:list' %}">Posts</a> |
-            <form class="logout-form" action="{% url 'users:logout' %}" method="POST">
-                {% csrf_token %}
-                <button class="logout-link" title="User Logout">Logout</button>
-            </form>
-        {% else %}
-            <a href="{% url 'users:login' %}">Login</a> |
-            <a href="{% url 'users:register' %}">Register</a> |
-        {% endif %}
-    </nav>
+    <nav class="navbar">
+        {% comment %} <img src="path/to/your/logo.png" alt="Logo"> {% endcomment %}
+        <div class="nav-links">
+            <a href="/" class="nav-link">Home</a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'posts:list' %}" class="nav-link">Posts</a>
+                <form class="logout-form" action="{% url 'users:logout' %}" method="POST">
+                    {% csrf_token %}
+                    <button class="logout-link" title="User Logout">Logout</button>
+                </form>
+            {% else %}
+                <a href="{% url 'users:login' %}" class="nav-link">Login</a>
+                <a href="{% url 'users:register' %}" class="nav-link">Register</a>
+            {% endif %}
+        </div>
+    </nav>    
     <main>
-        {% block content %}
-        {% endblock content %}
+        <div class="container">
+            {% block content %}
+            {% endblock content %}
+        </div>
+
     </main>
     <footer>
         {% block footer %}

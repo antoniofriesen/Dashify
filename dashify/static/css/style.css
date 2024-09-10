@@ -1,74 +1,75 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+/* Grundlegende Styles für die Seite */
+body {
+    background-color: white;
     font-family: Arial, sans-serif;
 }
 
-nav {
-    background-color: #f8f8f8;
-    padding: 10px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    margin-right: 15px;
-}
-
-main {
+.navbar {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 20px;
-    min-height: calc(100vh - 40px);
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-section {
-    width: 100%;
+.navbar img {
+    height: 50px; /* Höhe des Logos anpassen */
 }
 
-/* Updated styles for posts */
-article.post {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+.nav-links {
+    display: flex;
+    gap: 10px; /* Abstand zwischen den Buttons */
 }
 
-article.post h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-article.post p {
-    font-size: 16px;
-    color: #666;
-}
-
-/* Style the form to display inline */
-.logout-form {
-    display: inline;
-    margin: 0;
-    padding: 0;
-}
-
-/* Style the button to look like a link */
-.logout-link {
-    background: none;
+.nav-link {
+    background-color: #800000;
+    color: white;
     border: none;
-    color: #333;
-    cursor: pointer;
-    font-size: inherit;
-    font-family: inherit;
-    padding: 0;
+    border-radius: 20px; /* Abgerundete Ecken */
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s;
 }
 
-/*
-.logout-link:hover {
-    color: darkblue;
-    text-decoration: none;
+.nav-link:hover {
+    background-color: #982B1C; /* Dunklere Farbe beim Hover */
 }
-*/
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center; /* Zentrierte Texte */
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    color: #800000;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0;
+    width: 300px; /* Breite der Cards anpassen */
+    text-align: center; /* Zentrierter Text in der Card */
+}
+
+.logout-form {
+    display: inline; /* Damit das Formular neben den Links angezeigt wird */
+}
+
+.logout-link {
+    background-color: #800000;
+    color: white;
+    border: none;
+    border-radius: 20px; /* Abgerundete Ecken */
+    padding: 10px 15px;
+    cursor: pointer; /* Zeigt den Zeiger-Cursor an, wenn man darüber fährt */
+    transition: background-color 0.3s;
+}
+
+.logout-link:hover {
+    background-color: #982B1C; /* Dunklere Farbe beim Hover */
+}
+
