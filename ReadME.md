@@ -23,7 +23,7 @@ Ensure you have Python 3.12.2 installed. You can download Python from [here](htt
 
     **For Windows:**
     ```
-    python -m venv .venv
+    py -m venv .venv
     .\\.venv\\Scripts\\activate
     ```
 
@@ -34,14 +34,26 @@ Ensure you have Python 3.12.2 installed. You can download Python from [here](htt
     ```
 
 4. Apply migrations:
+    **For Mac/Linux:**
     ```
     python manage.py migrate
     ```
 
+    **For Windows:**
+    ```
+    py manage.py migrate
+    ```
+
 5. Start the server:
+    **For Mac/Linux:**
     ```
     python manage.py runserver
     ```
+
+    **For Windows:**
+    ```
+    py manage.py runserver
+    ``` 
 
 6. Open your browser and navigate to `http://127.0.0.1:8000/` to access Dashify.
 
