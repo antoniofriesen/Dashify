@@ -47,3 +47,27 @@ article.post p {
     font-size: 16px;
     color: #666;
 }
+
+/* Style the form to display inline */
+.logout-form {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the button to look like a link */
+.logout-link {
+    background: none;
+    border: none;
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: inherit;
+    font-family: inherit;
+    padding: 0;
+}
+
+.logout-link:hover {
+    color: darkblue;
+    text-decoration: none;
+}
