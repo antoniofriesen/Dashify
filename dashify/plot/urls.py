@@ -4,6 +4,6 @@ from . import views
 app_name = "plot"
 
 urlpatterns = [
-    path("plot/", views.plot_data, name="plot")
+    path("plot/", views.main, name="plot")
 
 ]
