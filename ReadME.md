@@ -29,6 +29,7 @@ Ensure you have Python 3.12.2 installed. You can download Python from [here](htt
 
 3. Install the required dependencies:
     ```
+    cd dashify
     pip install -r requirements.txt
     ```
 
