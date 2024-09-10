@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         {% block title %}
-            Django APP
+            Dashify
         {% endblock title %}
     </title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -17,6 +17,7 @@
         <a href="/">Home</a> |
         <a href="{% url 'users:login' %}">Login</a> |
         <a href="{% url 'users:register' %}">Register</a> |
+        <a href="{% url 'posts:list' %}">Posts</a> |
         <form class="logout" action="{% url 'users:logout' %}" method="POST">
             {% csrf_token %}
             <button class="logout-button" title="User Logout">Logout</button>
