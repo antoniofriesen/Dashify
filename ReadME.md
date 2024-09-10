@@ -55,7 +55,18 @@ Ensure you have Python 3.12.2 installed. You can download Python from [here](htt
     py manage.py runserver
     ``` 
 
-6. Open your browser and navigate to `http://127.0.0.1:8000/` to access Dashify.
+6. Create superuser (admin):
+    **For Mac/Linux:**
+    ```
+    python manage.py createsuperuser
+    ```
+
+    **For Windows:**
+    ```
+    py manage.py createsuperuser
+    ```         
+
+7. Open your browser and navigate to `http://127.0.0.1:8000/` to access Dashify.
 
 ## License
 This project is licensed under the MIT License.
