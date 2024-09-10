@@ -137,7 +137,7 @@ class App:
         """Erstellt und platziert die Widgets im gegebenen Frame."""
 
         # Label title
-        label0 = tk.Label(self.frame_buttons, text="Aufgabe 15a")
+        label0 = tk.Label(self.frame_buttons, text="Was möchtest du plotten?")
         label0.grid(row=0, column=0, columnspan=2, padx=5, pady=5, sticky="ew")
 
         # Buttons und Label
@@ -188,6 +188,7 @@ class App:
         """ Fragt den Benutzer, ob er die Anwendung schließen möchte. """
         if messagebox.askokcancel("Schließen", "Möchten Sie die Anwendung wirklich schließen?"):
             self.root.quit()
+            self.root.destroy()
 
 
 def main(request) -> None:
@@ -195,12 +196,11 @@ def main(request) -> None:
     App(root)
     root.mainloop()
     result = main()
-    return render(request, 'plot/plot.html', {'result': result})
+    return render(request, 'plot/darstellungen.html', {'result': result})
 
 if __name__ == '__main__':
     main()
 
 
-# Function to render the plots
-#def plot_data(request):
-#    return render(request, "plot/plot.html", {main()})
+def plot(request):
+    return render(request, "plot/plot.html")
