@@ -9,6 +9,10 @@
         <h1>{{ post.title }}</h1>
         <div class="card">
             <article class="post">
+                <img
+                    class = "banner"
+                    src="{{ post.banner.url }}"
+                    alt="{{ post.title }}">
                 <p>{{ post.date }}</p>
                 <p>{{ post.body }}</p>
             </article>

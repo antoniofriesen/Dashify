@@ -82,7 +82,7 @@ body {
     background-color: white;
     color: #6482AD;
     border-radius: 15px;
-    padding: 20px;
+    padding: 50px;
     margin: 10px; /* Margin zwischen den Cards */
     width: calc(100%); /* Breite der Cards (gleichmäßig auf 70% aufteilen) */
     text-align: left; /* Text in der Card linksbündig */
@@ -145,5 +145,11 @@ body {
 
 .logout-link:hover {
     background-color: #6482AD; /* Dunklere Farbe beim Hover */
+}
+
+.banner {
+    display: block;
+    width: 100%;
+    max-width: 400px;
 }
 
