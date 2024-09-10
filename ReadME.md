@@ -17,14 +17,14 @@ Ensure you have Python 3.12.2 installed. You can download Python from [here](htt
 
     **For Mac/Linux:**
     ```
-    python3 -m venv venv
-    source venv/bin/activate
+    python3 -m venv .venv
+    source .venv/bin/activate
     ```
 
     **For Windows:**
     ```
-    python -m venv venv
-    .\\venv\\Scripts\\activate
+    python -m venv .venv
+    .\\.venv\\Scripts\\activate
     ```
 
 3. Install the required dependencies:
