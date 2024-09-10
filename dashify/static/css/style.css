@@ -1,6 +1,6 @@
 /* Grundlegende Styles für die Seite */
 body {
-    background-color: white;
+    background-color: whitesmoke;
     font-family: Arial, sans-serif;
 }
 
@@ -8,9 +8,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    /* background-color: #6482AD; */
     padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
 }
 
 .navbar img {
@@ -23,36 +23,110 @@ body {
 }
 
 .nav-link {
-    background-color: #800000;
+    background-color: #6482AD;
     color: white;
     border: none;
     border-radius: 20px; /* Abgerundete Ecken */
     padding: 10px 15px;
     text-decoration: none;
     transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schatteneffekt hinzufügen */
 }
 
 .nav-link:hover {
-    background-color: #982B1C; /* Dunklere Farbe beim Hover */
+    background-color: #6482AD; /* Dunklere Farbe beim Hover */
 }
 
 .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center; /* Zentrierte Texte */
-    padding: 20px;
+    flex-direction: column; /* Für vertikale Anordnung */
+    align-items: flex-start; /* Links ausrichten */
+    justify-content: flex-start; /* Start der vertikalen Ausrichtung */
+    padding: 10px; /* Innenabstand */
 }
 
 .card {
     background-color: white;
-    color: #800000;
+    color: #6482AD;
     border-radius: 10px;
     padding: 20px;
     margin: 10px 0;
-    width: 300px; /* Breite der Cards anpassen */
-    text-align: center; /* Zentrierter Text in der Card */
+    width: 100%; /* Breite der Cards auf 100% des Containers */
+    text-align: left; /* Text in der Card linksbündig */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schatteneffekt hinzufügen */
+}
+
+/* Zentrierte h1-Überschrift */
+.card h1, .home-card h1, button {
+    text-align: center; /* Zentriert die h1-Überschrift */
+    margin: 20px 0; /* Abstand oben und unten */
+}
+
+/* Links ausgerichtete p-Absätze */
+.card p, .home-card p {
+    text-align: left; /* Links ausgerichteter Text für p-Elemente */
+    margin: 10px 0; /* Abstand oben und unten */
+}
+
+/* Spezifische Styles für die Home-Seite */
+.home-container {
+    display: flex; /* Flexbox aktivieren */
+    justify-content: space-between; /* Gleichmäßiger Abstand zwischen den Cards */
+    align-items: flex-start; /* Oben ausrichten */
+    margin: 100px auto; /* Abstand von 100px oben und zentriert */
+    max-width: 1200px; /* Maximale Breite des Containers anpassen */
+    padding: 20px; /* Innenabstand */
+}
+
+.home-card {
+    background-color: white;
+    color: #6482AD;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px; /* Margin zwischen den Cards */
+    width: calc(100%); /* Breite der Cards (gleichmäßig auf 70% aufteilen) */
+    text-align: left; /* Text in der Card linksbündig */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schatteneffekt hinzufügen */
+}
+
+/* Responsive Design für die Home-Seite */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column; /* Bei kleinen Bildschirmen vertikal anordnen */
+        align-items: center; /* Zentrieren */
+    }
+
+    .home-card {
+        width: 90%; /* Bei kleinen Bildschirmen 90% Breite */
+        margin: 10px 0; /* Margin oben und unten */
+    }
+}
+
+.button {
+    background-color: #6482AD; /* Magenta-Farbton für den Hintergrund */
+    color: white; /* Weiße Schriftfarbe */
+    border: none; /* Keine Rahmen */
+    border-radius: 30px; /* Abgerundete Ecken */
+    padding: 15px 25px; /* Innenabstand (oben/unten, links/rechts) */
+    font-size: 16px; /* Schriftgröße */
+    cursor: pointer; /* Cursor ändert sich beim Hover */
+    text-align: center; /* Text zentrieren */
+    transition: background-color 0.3s, transform 0.3s; /* Übergangseffekte */
+    display: inline-block; /* Erlaubt zentrierte Platzierung */
+    align-items: center
+}
+
+/* Hover-Effekte für den Button */
+.button:hover {
+    background-color: #4f79af; /* Dunklerer Magenta-Farbton beim Hover */
+    transform: translateY(-2px); /* Leichte Anhebung beim Hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .button {
+        width: 100%; /* Bei kleinen Bildschirmen die volle Breite */
+    }
 }
 
 .logout-form {
@@ -60,7 +134,7 @@ body {
 }
 
 .logout-link {
-    background-color: #800000;
+    background-color: #6482AD;
     color: white;
     border: none;
     border-radius: 20px; /* Abgerundete Ecken */
@@ -70,6 +144,6 @@ body {
 }
 
 .logout-link:hover {
-    background-color: #982B1C; /* Dunklere Farbe beim Hover */
+    background-color: #6482AD; /* Dunklere Farbe beim Hover */
 }
 

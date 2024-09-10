@@ -9,6 +9,7 @@
             Dashify
         {% endblock title %}
     </title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <script src="{% static 'js/main.js' %}" defer></script>
 </head>
@@ -16,7 +17,6 @@
     <nav class="navbar">
         {% comment %} <img src="path/to/your/logo.png" alt="Logo"> {% endcomment %}
         <div class="nav-links">
-            <a href="/" class="nav-link">Home</a>
             {% if user.is_authenticated %}
                 <a href="{% url 'posts:list' %}" class="nav-link">Posts</a>
                 <form class="logout-form" action="{% url 'users:logout' %}" method="POST">
@@ -24,6 +24,7 @@
                     <button class="logout-link" title="User Logout">Logout</button>
                 </form>
             {% else %}
+                <a href="/" class="nav-link">Home</a>
                 <a href="{% url 'users:login' %}" class="nav-link">Login</a>
                 <a href="{% url 'users:register' %}" class="nav-link">Register</a>
             {% endif %}
@@ -40,5 +41,8 @@
         {% block footer %}
         {% endblock footer %}
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

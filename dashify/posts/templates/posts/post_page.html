@@ -5,9 +5,13 @@
 {% endblock title %}
 
 {% block content %}
-    <section>
+    <div class="container">
         <h1>{{ post.title }}</h1>
-        <p>{{ post.date }}</p>
-        <p>{{ post.body }}</p>
-    </section>
+        <div class="card">
+            <article class="post">
+                <p>{{ post.date }}</p>
+                <p>{{ post.body }}</p>
+            </article>
+        </div>
+    </div>
 {% endblock content %}

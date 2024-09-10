@@ -22,7 +22,7 @@ def login_user(request):
             user = form_login.get_user()
             login(request, user)
             # TODO: dummy redirection: add path to dashboard here
-            return redirect("home")
+            return redirect("dashboard")
     else:
         form_login = AuthenticationForm()
     return render(request, "users/login.html", { "form": form_login })
