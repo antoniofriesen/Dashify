@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.shortcuts import redirect
+from django.http import HttpResponse
 import tkinter as tk
 from tkinter import filedialog
 from tkinter import messagebox
@@ -195,8 +197,7 @@ def main(request) -> None:
     root = tk.Tk()
     App(root)
     root.mainloop()
-    result = main()
-    return render(request, 'plot/darstellungen.html', {'result': result})
+    return redirect("../plot/")
 
 if __name__ == '__main__':
     main()
