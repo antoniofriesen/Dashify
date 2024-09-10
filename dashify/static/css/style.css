@@ -59,15 +59,16 @@ article.post p {
 .logout-link {
     background: none;
     border: none;
-    color: blue;
+    color: #333;
     cursor: pointer;
-    text-decoration: underline;
     font-size: inherit;
     font-family: inherit;
     padding: 0;
 }
 
+/*
 .logout-link:hover {
     color: darkblue;
     text-decoration: none;
 }
+*/
