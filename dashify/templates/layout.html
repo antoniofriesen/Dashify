@@ -10,7 +10,6 @@
         {% endblock title %}
     </title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <script src="{% static 'js/main.js' %}" defer></script>
 </head>
 <body>
     <nav class="navbar">
@@ -18,12 +17,19 @@
         <div class="nav-links">
             {% if user.is_authenticated %}
                 <a href="{% url 'dashboard' %}" class="nav-link">Dashboard</a>
-                <form class="logout-form" action="{% url 'users:logout' %}" method="POST">
+                <a href="{% url 'posts:list' %}" class="nav-link">Posts</a>
+                <a href="{% url 'posts:new-post' %}" class="nav-link">New Post</a>
+                <a href="{% url 'plot:plot' %}" class="nav-link">Plots erstellen</a>
+                <a href="#" class="nav-link logout-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    Logout
+                </a>
+                <form id="logout-form" action="{% url 'users:logout' %}" method="POST" style="display: none;">
                     {% csrf_token %}
-                    <button class="logout-link" title="User Logout">Logout</button>
                 </form>
             {% else %}
                 <a href="/" class="nav-link">Home</a>
+                <a href="{% url 'users:login' %}" class="button">Login</a>
+                    <a href="{% url 'users:register' %}" class="button">Registrieren</a>
             {% endif %}
         </div>
     </nav>    

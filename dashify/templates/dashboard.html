@@ -5,27 +5,29 @@
 {% endblock title %}
 
 {% block content %}
-    <div class="container">
-        <div class="card">
-            <div>
-                <h1>Posts</h1>
+    <main>
+        <div class="container">
+            <div class="card">
+                <div>
+                    <h1>Posts</h1>
+                </div>
+                <div>
+                    <p>Posts text</p>
+                </div>
+                    <a href="{% url 'posts:list' %}"><button class="button">Posts</button></a>
+                    <a href="{% url 'posts:new-post' %}"><button class="button">New Posts</button></a>
+                </div>
             </div>
-            <div>
-                <p>Posts text</p>
-            </div>
-                <a href="{% url 'posts:list' %}"><button class="button">Posts</button></a>
-                <a href="{% url 'posts:new-post' %}"><button class="button">New Posts</button></a>
+            <div class="card">
+                <div>
+                    <h1>Plot</h1>
+                </div>
+                <div>
+                    <p>Plot text</p>
+                </div>
+                    <a href="{% url 'plot:plot' %}"><button class="button">Plots erstellen</button></a>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <div>
-                <h1>Plot</h1>
-            </div>
-            <div>
-                <p>Plot text</p>
-            </div>
-                <a href="{% url 'plot:plot' %}"><button class="button">Plots erstellen</button></a>
-            </div>
-        </div>
-    </div>
+    </main>
 {% endblock content %}
