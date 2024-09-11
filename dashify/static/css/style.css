@@ -17,6 +17,10 @@ nav a {
     margin-right: 15px;
 }
 
+a {
+    color: black;
+}
+
 main {
     display: flex;
     justify-content: flex-start;
@@ -25,7 +29,6 @@ main {
     min-height: calc(100vh - 40px);
 }
 
-/* Updated styles for posts */
 article.post {
     margin-bottom: 20px;
     padding: 15px;
