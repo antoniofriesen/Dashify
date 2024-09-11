@@ -6,18 +6,19 @@
 
 {% block content %}
     <div class="container">
-        <h1>Posts</h1>
-            {% for post in posts %}
-                <div class="card">
-                    <article class="post">
-                        <h2>
-                            <a href="{% url 'posts:page' slug=post.slug %}">
-                            {{ post.title }}
-                            </a>
-                        </h2>
-                        <p>{{ post.date }} from {{ post.author }}</p>
-                    </article>
-                </div>
-            {% endfor %}
+        {% for post in posts %}
+            <article class="post">
+                <h2>
+                    <a href="{% url 'posts:page' slug=post.slug %}">
+                    {{ post.title }}
+                    </a>
+                </h2>
+                <p>
+                    Erstellt am <b><i>{{ post.date|date:"d.m.Y" }}</i></b> 
+                    um <b><i>{{ post.date|date:"H:i" }}</i></b> 
+                    von <b><i>{{ post.author }}</i></b>
+                </p>
+            </article>
+        {% endfor %}
     </div>
 {% endblock content %}

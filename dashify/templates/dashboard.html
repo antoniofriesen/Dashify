@@ -6,17 +6,27 @@
 
 {% block content %}
     <main>
-        <div>
+        <div class="dashboard-container">
             <article class="post">
                 <h1>Posts</h1>
-                <p>Posts text</p>
-                <a href="{% url 'posts:list' %}"><button class="button">Posts</button></a>
-                <a href="{% url 'posts:new-post' %}"><button class="button">New Posts</button></a>
+                <p>
+                    Entdecke unsere neuesten Beiträge zu verschiedenen Themen! <br>
+                    Egal, ob du nach Inspiration suchst oder einfach nur mehr über bestimmte Themen erfahren möchtest, unsere Posts bieten dir wertvolle Einblicke. <br>
+                </p>
+                <div class="button-container">
+                    <a href="{% url 'posts:list' %}"><button class="button">Posts lesen</button></a>
+                    <a href="{% url 'posts:new-post' %}"><button class="button">Post erstellen</button></a>
+                </div>
             </article>
             <article class="post">
                 <h1>Plot</h1>
-                <p>Plot text</p>
-                <a href="{% url 'plot:plot' %}"><button class="button">Plots erstellen</button></a>
+                <p>
+                    Entdecke die Möglichkeiten zur Datenvisualisierung mit unseren Plot-Funktionen! <br>
+                    Egal, ob du Daten analysieren oder Trends visualisieren möchtest, unsere Plot-Tools bieten dir wertvolle Einblicke. <br>
+                </p>
+                <div class="button-container">
+                    <a href="{% url 'plot:plot' %}"><button class="button">Plots erstellen</button></a>
+                </div>
             </article>
         </div>
     </main>

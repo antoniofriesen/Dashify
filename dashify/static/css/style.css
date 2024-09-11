@@ -1,49 +1,268 @@
+:root {
+    --colourbg: #DFB81A;
+    --colorfont: black;
+    --coloraccent: black;
+    --colorhover: #134056;
+    --colorfontbutton: whitesmoke;
+    --colortitleposts: black;
+}
+
+/* Base Styles */
 html, body {
-    background-color: whitesmoke;
+    background-color: var(--colourbg);
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    color: var(--coloraccent);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-nav {
-    background-color: #8a8787;
-    padding: 10px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #fff;
-    margin-right: 15px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1;
 }
 
 a {
-    color: black;
+    text-decoration: none;
+    color: var(--colortitlepost);
 }
 
+/* Navbar Styles */
+nav.navbar {
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+nav.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+nav.navbar a.nav-link, nav.navbar a.button {
+    padding: 8px 16px;
+    border-radius: 25px;
+    background-color: var(--coloraccent);
+    color: var(--colorfontbutton);
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+nav.navbar a.nav-link:hover, nav.navbar a.button:hover {
+    background-color: var(--colorhover);
+}
+
+/* Main Styles */
 main {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 20px;
-    min-height: calc(100vh - 40px);
+    justify-content: center;
+    padding: 40px 0;
+    background-color: var(--colourbg);
+    flex: 1;
+    min-width: 400px;
 }
 
-article.post {
+/* Post and Card Styles */
+article.post, .card {
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
-    padding: 15px;
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
 }
 
 article.post h2 {
     font-size: 24px;
+    color: var(--colortitleposts);
+}
+
+article.post p, .card p {
+    font-size: 16px;
+    color: var(--colorfont);
+}
+
+/* Form Styles */
+.form-register, .form {
+    width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-container {
+    display:flex
+}
+
+.form h2, .form h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: var(--coloraccent);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group span.helptext .errorlist {
+    display: none;
+    color: red;
+    font-size: 12px;
+}
+
+.form-group input:invalid + span.helptext {
+    display: block;
+}
+
+/* Button Styles */
+.submit-btn, .button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--coloraccent);
+    color: var(--colorfontbutton);
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover, .button:hover {
+    background-color: var(--colorhover);
+}
+
+/* Footer */
+footer {
+    padding: 10px 30px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--coloraccent);
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0);
+    margin-top: auto;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Abstand zwischen den Artikeln */
+    justify-content: center; /* Zentriere die Artikel */
+}
+
+/* Buttons nebeneinander im Artikel */
+.post .button-container {
+    display: flex;
+    gap: 10px; /* Abstand zwischen den Buttons */
+}
+
+.post .button-container .button {
+    width: auto; /* Verhindert, dass die Buttons die volle Breite einnehmen */
+    padding: 8px 16px; /* Konsistente Button-Größe */
+}
+
+/* Post Page Styles */
+.post-card {
+    padding: 30px;
+}
+
+.post-title {
+    font-size: 32px;
+    color: var(--colortitleposts);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.banner {
+    max-width: 400px;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.post-meta {
+    font-size: 14px;
+    color: var(--colorfont);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.post-body {
+    font-size: 18px;
+    color: var(--colorfont);
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Home Page Styles */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 60px;
+    color: var(--coloraccent);
     margin-bottom: 10px;
 }
 
-article.post p {
-    font-size: 16px;
-    color: #666;
+.header .welcome-message {
+    font-size: 20px;
+    color: var(--colorfont);
+    margin-bottom: 30px;
 }
+
+.post {
+    background-color: whitesmoke;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button-container .button {
+    padding: 8px 12px;
+    max-width: 150px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-container .button:hover {
+    background-color: var(--colorhover);
+    transform: scale(1.05);
+}
+

@@ -6,16 +6,18 @@
 
 {% block content %}
     <div class="container">
-        <div class="card">
-            <h1>{{ post.title }}</h1>
-            <article class="post">
-                <img
-                    class = "banner"
-                    src="{{ post.banner.url }}"
-                    alt="{{ post.title }}">
-                <p>{{ post.date }} von {{ post.author }}</p>
-                <p>{{ post.body }}</p>
-            </article>
-        </div>
+        <article class="post">
+            <h1 class="post-title">{{ post.title }}</h1>
+            <img
+                class="banner"
+                src="{{ post.banner.url }}"
+                alt="{{ post.title }}">
+            <p class="post-meta">
+                Erstellt am <b><i>{{ post.date|date:"d.m.Y" }} </i></b>
+                um <b><i>{{ post.date|date:"H:i" }} Uhr </i></b>
+                von <b><i>{{ post.author }}</i></b>
+            </p>
+            <p class="post-body">{{ post.body|linebreaks }}</p>
+        </article>
     </div>
 {% endblock content %}

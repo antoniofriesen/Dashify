@@ -6,15 +6,47 @@
 
 {% block content %}
     <main>
-        <div class="container">
-            <div class="card">
-                <h1>Registrieren</h1>
-                <form class = "form" action="/users/register/" method="POST">
-                    {% csrf_token %}
-                    {{ form }}
-                    <button class="button">Submit</button>
-                </form>
-            </div>
+        <div class="form-container">
+            <form method="post" class="form-register">
+                {% csrf_token %}
+                <h2>Register</h2>
+        
+                <!-- Display form errors (if any) -->
+                {% if form.errors %}
+                <ul class="errorlist">
+                    {% for field in form %}
+                    <li>{{ field.label_tag }}: 
+                        {% for error in field.errors %}
+                        {{ error }}
+                        {% endfor %}
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+        
+                <!-- Username Field -->
+                <div class="form-group">
+                    <label for="{{ form.username.id_for_label }}">Username:</label>
+                    {{ form.username }}
+                </div>
+        
+                <!-- Password Field -->
+                <div class="form-group">
+                    <label for="{{ form.password1.id_for_label }}">Password:</label>
+                    {{ form.password1 }}
+                </div>
+        
+                <!-- Password Confirmation Field -->
+                <div class="form-group">
+                    <label for="{{ form.password2.id_for_label }}">Confirm Password:</label>
+                    {{ form.password2 }}
+                </div>
+        
+                <!-- Submit Button -->
+                <div class="button-container">
+                    <button type="submit" class="button">Submit</button>
+                </div>
+            </form>
         </div>
     </main>
-{% endblock content %}
+{% endblock %}
