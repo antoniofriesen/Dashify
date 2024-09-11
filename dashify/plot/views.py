@@ -178,9 +178,18 @@ class App:
 
     def plot_data(self) -> None:
         """ Liest die Daten aus der ausgewählten Datei und plottet sie auf das Diagramm. """
-        x, y = self.data_reader.read_data()
-        if x and y:
-            self.plot_w.plotxy(x, y)
+        data = self.data_reader.read_data()
+
+        if len(data) == 2:
+            x, y = data
+            if x and y:
+                self.plot_w.plotxy(x, y)
+        elif len(data) == 5:
+            x, y1, y2, y3, legend_entries = data
+            if x and y1 and y2 and y3:
+                self.plot_w.plot_multiple(x, y1, y2, y3, legend_entries)
+        else:
+            print("Unbekanntes Datenformat")
 
     def clear_plot(self) -> None:
         """ Löscht den aktuellen Plot. """
