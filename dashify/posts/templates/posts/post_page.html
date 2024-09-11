@@ -6,14 +6,14 @@
 
 {% block content %}
     <div class="container">
-        <h1>{{ post.title }}</h1>
         <div class="card">
+            <h1>{{ post.title }}</h1>
             <article class="post">
                 <img
                     class = "banner"
                     src="{{ post.banner.url }}"
                     alt="{{ post.title }}">
-                <p>{{ post.date }}</p>
+                <p>{{ post.date }} von {{ post.author }}</p>
                 <p>{{ post.body }}</p>
             </article>
         </div>
