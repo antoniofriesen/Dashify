@@ -132,6 +132,9 @@ ENV/
 env.bak/
 venv.bak/
 
+# Screenshots folder
+screenshots/
+
 # Spyder project settings
 .spyderproject
 .spyproject
