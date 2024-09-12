@@ -46,18 +46,19 @@ nav.navbar .nav-links {
     gap: 20px;
 }
 
-nav.navbar a.nav-link, nav.navbar a.button {
+nav.navbar a.nav-link {
     padding: 8px 16px;
-    border-radius: 25px;
-    background-color: var(--coloraccent);
-    color: var(--colorfontbutton);
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    border-radius: 0;
+    background-color: transparent;
+    color: var(--coloraccent);
+    font-weight: normal;
+    transition: color 0.3s ease;
 }
 
-nav.navbar a.nav-link:hover, nav.navbar a.button:hover {
-    background-color: var(--colorhover);
+nav.navbar a.nav-link:hover {
+    color: var(--colorhover);
 }
+
 
 /* Main Styles */
 main {
