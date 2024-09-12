@@ -1,3 +1,4 @@
+/* Variables */
 :root {
     --colourbg: #D5A432;
     --colorfont: black;
@@ -170,19 +171,18 @@ footer {
 .dashboard-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Abstand zwischen den Artikeln */
-    justify-content: center; /* Zentriere die Artikel */
+    gap: 20px;
+    justify-content: center;
 }
 
-/* Buttons nebeneinander im Artikel */
 .post .button-container {
     display: flex;
-    gap: 10px; /* Abstand zwischen den Buttons */
+    gap: 10px;
 }
 
 .post .button-container .button {
-    width: auto; /* Verhindert, dass die Buttons die volle Breite einnehmen */
-    padding: 8px 16px; /* Konsistente Button-Größe */
+    width: auto;
+    padding: 8px 16px;
 }
 
 /* Post Page Styles */
