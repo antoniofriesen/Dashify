@@ -1,7 +1,7 @@
 /* Variables */
 :root {
     --colourbg: #D5A432;
-    --colorfont: black;
+    --colorfont: rgb(8, 8, 8);
     --coloraccent: black;
     --colorhover: #134056;
     --colorfontbutton: whitesmoke;
